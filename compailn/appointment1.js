@@ -1,4 +1,4 @@
-liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('topic');
     if (!liff.isLoggedIn()) {
@@ -10,7 +10,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
     } else if (!(await checkUser(await getUID()))) {
       window.location = '../register.html';
     } else if (!(await getFriend())) {
-      window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
+      window.location = 'https://line.me/R/ti/p/@172nwynm';
     } else {
       document.getElementById('show').style.visibility = 'visible';
     }

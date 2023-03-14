@@ -120,7 +120,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        'https://nrsmartcity.netlify.app/userSmart/Creuser',
+        'https://smartcity.onrender.com/userSmart/Creuser',
         requestOptions
       ).then(() => {
         Swal.fire('บันทึกข้อมูลสำเร็จ', '', 'success')
