@@ -1,12 +1,12 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app/register.html'
+      redirectUri: 'https://nrsmartcity.netlify.app/register.html'
     });
   } else if (await checkUser(await getUID())) {
     window.location = './index.html';
   } else if (!(await getFriend())) {
-    window.location = 'https://line.me/R/ti/p/@172nwynm';
+    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
   } else {
     document.getElementById('show').style.visibility = 'visible';
   }
@@ -38,7 +38,7 @@ function makeList(id, data, clear = true) {
 $(document).ready(async () => {
   const isFriend = await getFriend();
   if (!isFriend) {
-    window.location = 'https://line.me/R/ti/p/@172nwynm';
+    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
   }
   const uid = await getUID();
   const ck = await checkUser(uid);
@@ -120,7 +120,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        'https://smartcity.onrender.com/userSmart/Creuser',
+        'https://nrsmartcity.netlify.app/userSmart/Creuser',
         requestOptions
       ).then(() => {
         Swal.fire('บันทึกข้อมูลสำเร็จ', '', 'success')

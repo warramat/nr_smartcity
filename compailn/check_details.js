@@ -1,15 +1,15 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get('key') || 0;
   const _id = urlParams.get('_id');
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: `https://tapp-smartcity.netlify.app/compailn/check_details.html?key=${key}&_id=${_id}`
+      redirectUri: `https://nrsmartcity.netlify.app/compailn/check_details.html?key=${key}&_id=${_id}`
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
   } else if (!(await getFriend())) {
-    window.location = 'https://line.me/R/ti/p/@172nwynm';
+    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
   } else {
     document.getElementById('show').style.visibility = 'visible';
   }
@@ -102,7 +102,7 @@ function comment() {
         const urlParams = new URLSearchParams(window.location.search);
         const _id = urlParams.get('_id');
         let url =
-          'https://smartcity.onrender.com/appeal/addStar/Comment/' +
+          'https://nrsmartcity.netlify.app/appeal/addStar/Comment/' +
           _id;
         let myHeaders = new Headers();
         myHeaders.append('Content-Type', 'application/json');
@@ -127,13 +127,13 @@ function comment() {
 }
 
 window.onload = async () => {
-  const img_url = 'https://smartcity.onrender.com/userSmart/';
+  const img_url = 'https://nrsmartcity.netlify.app/userSmart/';
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get('key') || 0;
   const _id = urlParams.get('_id');
   let data = await fetch(
-    'https://smartcity.onrender.com/appeal/find/data?userID=' + UID
+    'https://nrsmartcity.netlify.app/appeal/find/data?userID=' + UID
   );
   data = await data.json();
   data = data.data;

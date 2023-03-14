@@ -1,12 +1,12 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app/compailn/check.html'
+      redirectUri: 'https://nrsmartcity.netlify.app/compailn/check.html'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
   } else if (!(await getFriend())) {
-    window.location = 'https://line.me/R/ti/p/@172nwynm';
+    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
   } else {
     document.getElementById('show').style.visibility = 'visible';
   }
@@ -25,7 +25,7 @@ async function getUID() {
 window.onload = async () => {
   const UID = await getUID();
   let data = await fetch(
-    'https://smartcity.onrender.com/appeal/find/data?userID=' + UID
+    'https://nrsmartcity.netlify.app/appeal/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();
@@ -40,7 +40,7 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <h2><img style="width:80px" src="https://smartcity.onrender.com/userSmart/${
+          <h2><img style="width:80px" src="https://nrsmartcity.netlify.app/userSmart/${
             item.img[0]
           }"/></h2>
         </div>
