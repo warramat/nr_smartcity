@@ -6,7 +6,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   } else if (await checkUser(await getUID())) {
     window.location = './index.html';
   } else if (!(await getFriend())) {
-    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
+    window.location = 'https://line.me/R/ti/p/@451ukfkc';
   } else {
     document.getElementById('show').style.visibility = 'visible';
   }
@@ -38,7 +38,7 @@ function makeList(id, data, clear = true) {
 $(document).ready(async () => {
   const isFriend = await getFriend();
   if (!isFriend) {
-    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
+    window.location = 'https://line.me/R/ti/p/@451ukfkc';
   }
   const uid = await getUID();
   const ck = await checkUser(uid);

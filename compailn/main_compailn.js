@@ -7,7 +7,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
   } else if (!(await getFriend())) {
-    window.location = 'https://liff.line.me/1660741031-p2Rllq1n';
+    window.location = 'https://line.me/R/ti/p/@451ukfkc';
   } else {
     document.getElementById('show').style.visibility = 'visible';
   }
