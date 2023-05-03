@@ -4,7 +4,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   const _id = urlParams.get('_id');
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: `https://nrsmartcity.netlify.app/compailn/check_details.html?key=${key}&_id=${_id}`
+      redirectUri: `https://tapp-smartcity.netlify.app/compailn/check_details.html?key=${key}&_id=${_id}`
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
@@ -102,7 +102,7 @@ function comment() {
         const urlParams = new URLSearchParams(window.location.search);
         const _id = urlParams.get('_id');
         let url =
-          'https://nrsmartcity.netlify.app/appeal/addStar/Comment/' +
+          'https://tapp-smartcity.netlify.app/appeal/addStar/Comment/' +
           _id;
         let myHeaders = new Headers();
         myHeaders.append('Content-Type', 'application/json');
@@ -127,13 +127,13 @@ function comment() {
 }
 
 window.onload = async () => {
-  const img_url = 'https://nrsmartcity.netlify.app/userSmart/';
+  const img_url = 'https://tapp-smartcity.netlify.app/userSmart/';
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get('key') || 0;
   const _id = urlParams.get('_id');
   let data = await fetch(
-    'https://nrsmartcity.netlify.app/appeal/find/data?userID=' + UID
+    'https://tapp-smartcity.netlify.app/appeal/find/data?userID=' + UID
   );
   data = await data.json();
   data = data.data;

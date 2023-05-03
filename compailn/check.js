@@ -1,7 +1,7 @@
 liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://nrsmartcity.netlify.app/compailn/check.html'
+      redirectUri: 'https://tapp-smartcity.netlify.app/compailn/check.html'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
@@ -25,7 +25,7 @@ async function getUID() {
 window.onload = async () => {
   const UID = await getUID();
   let data = await fetch(
-    'https://nrsmartcity.netlify.app/appeal/find/data?userID=' + UID
+    'https://tapp-smartcity.netlify.app/appeal/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();
