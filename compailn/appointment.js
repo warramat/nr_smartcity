@@ -54,7 +54,7 @@ $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
   let data = await fetch(
-    'https://nrsmartcity.netlify.app/apply/search?topic=' + myParam
+    'https://tapp-smartcity.netlify.app/apply/search?topic=' + myParam
   );
   data = await data.json();
   let html = '';
@@ -88,7 +88,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        'https://nrsmartcity.netlify.app/appeal/addappeal',
+        'https://tapp-smartcity.netlify.app/appeal/addappeal',
         requestOptions
       )
         .then(() => {
