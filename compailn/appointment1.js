@@ -4,7 +4,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
     if (!liff.isLoggedIn()) {
       liff.login({
         redirectUri:
-          'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+          'https://nrsmartcity.netlify.app/compailn/appointment.html?topic=' +
           myParam
       });
     } else if (!(await checkUser(await getUID()))) {
@@ -54,7 +54,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('topic');
     let data = await fetch(
-      'https://tapp-smartcity.netlify.app/apply/search?topic=' + myParam
+      'https://nrsmartcity.netlify.app/apply/search?topic=' + myParam
     );
     data = await data.json();
     let html = '';
@@ -88,7 +88,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
           redirect: 'follow'
         };
         fetch(
-          'https://tapp-smartcity.netlify.app/appeal/addappeal',
+          'https://nrsmartcity.netlify.app/appeal/addappeal',
           requestOptions
         )
           .then(() => {

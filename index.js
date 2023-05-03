@@ -10,7 +10,7 @@ function logout() {
 liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app'
+      redirectUri: 'https://nrsmartcity.netlify.app'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';

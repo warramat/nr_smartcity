@@ -2,7 +2,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
       redirectUri:
-        'https://tapp-smartcity.netlify.app/compailn/main_compailn.html'
+        'https://nrsmartcity.netlify.app/compailn/main_compailn.html'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
