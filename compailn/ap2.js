@@ -4,7 +4,7 @@ liff.init({ liffId: '1660741031-p2Rllq1n' }).then(async () => {
     if (!liff.isLoggedIn()) {
       liff.login({
         redirectUri:
-          'https://nrsmartcity.netlify.app/compailn/appointment.html?topic=' +
+          'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
           myParam
       });
     } else if (!(await checkUser(await getUID()))) {
